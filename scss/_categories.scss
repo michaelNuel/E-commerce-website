@@ -1,0 +1,321 @@
+
+.categories_section{
+    height: 170vh;
+    background-color:$col-background-color;
+
+    .categories_wrapper{
+        margin: 0 2.5rem;
+        padding-top: 5rem;
+
+       form{
+        display: flex;
+        justify-content: center;
+        
+        .search_bar{
+          padding: .7rem 36rem .7rem .5rem;
+          border: 1px solid $col-icon-background;
+        }
+        
+        .search_bar::placeholder{
+            color: grey;
+            font-weight: bold;
+            font-size: .9rem;
+            opacity: 0.8;
+
+        }
+
+        .bx-search{
+            color: black;
+            font-size: 1.3rem;
+            margin: .5rem 0 0 0;
+            transform: translateX(-150%);
+            opacity: 0.8;
+        }
+         
+        .bxs-cart{
+            color: $col-secondary;
+            font-size: 2rem;
+            margin-left: -1rem;
+        }
+       } 
+       
+      .selection_btn_wrapper{
+        margin: 2rem 7.5rem;
+        display: flex;
+        justify-content: space-evenly;
+
+        .drop_down_wrapper{
+            position: relative;
+            
+
+          
+            .selection_btn{
+                padding: .8rem 2.8rem;
+                background-color: white;
+                border: 1px solid grey;
+                font-size: .76rem;
+                margin-right: .5rem;
+                cursor: pointer;
+
+               
+                
+            }
+
+          
+
+            .drop_down_menu{
+                position: absolute;
+                left: 0;
+                font-size: .8rem;
+                // top: calc(100% + .8rem);
+                padding: .8rem 2.6rem;
+                opacity: 0;
+                text-align: center;
+                background-color: $col-secondary;
+                color: white;
+                transform: translateY(-10px);
+                pointer-events: none;
+               transition: opacity 150ms ease-in-out, transform  150ms ease-in-out ;
+
+
+               .selection_btn_link_dropdown{
+                text-decoration: none;
+                color: white;
+                cursor: pointer;
+                transition: all .4s ease-in;
+                
+
+                &:hover{
+                    opacity: .8;
+
+                }
+               }
+            }
+           
+           
+          
+        }
+
+        .drop_down_wrapper.active > .selection_btn ,
+        .selection_btn:hover{
+            color:black;
+            opacity: .8;
+            
+        }
+         
+         .drop_down_wrapper:nth-child(1) .selection_btn{
+            padding: .8rem 4.3rem ;
+         }
+
+         .drop_down_wrapper:nth-child(2) .selection_btn{
+            padding: .8rem 4.1rem ;
+         }
+
+         .drop_down_wrapper:nth-child(1) .drop_down_menu{
+            padding: .8rem 4.1rem  ;
+           
+        }
+
+        .drop_down_wrapper:nth-child(2) .drop_down_menu{
+            padding: .8rem 4.3rem  ;
+           
+        }
+
+        .drop_down_wrapper:nth-child(3) .drop_down_menu{
+            padding: .8rem 4.1rem ;
+           
+        }
+        
+        .drop_down_wrapper:nth-child(4) .drop_down_menu{
+            padding: .8rem 4.1rem ;
+           
+        }
+        .drop_down_wrapper.active > .selection_btn + .drop_down_menu{
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        
+      }
+
+
+      .measurement_opt_wrapper{
+        display: flex;
+        justify-content: center;
+        padding-top: 2rem;
+
+        .measurement_wrapper_left{
+            border: 2px solid rgba(233, 233, 233, 0.803);
+            padding: 1.3rem 3rem;
+            margin-right: 2rem;
+            background-color: white;
+            
+
+            .measurement_heading{
+                font-size: 1.3rem;
+                text-align: center;
+                margin-bottom: .6rem;
+                opacity: .8;
+            }
+
+            .measurement_details_wrapper{
+                display: flex;
+                justify-content: space-evenly;
+
+                .measurement_details_wrapper_left{
+                 
+
+                    .measurement_details_wrapper_content{
+
+                        .content_text{
+                            text-align: center;
+                            border: 1px solid grey;
+                            border-right: none;
+                            border-bottom: none;
+                            padding: .4rem 1rem;
+                            font-weight: bold;
+                            opacity: .8;
+                        }
+                          
+                        .input_measurement{
+                            padding: .4rem 1rem;
+                            background-color: white;
+                            border-top:1px solid #808080;
+                            border-left:none ;
+                            border-right: 1px solid grey;
+                            border-bottom: none;
+
+                        }
+
+                    }
+                }
+
+
+                .measurement_details_wrapper_right{
+
+
+                    .measurement_details_wrapper_content{
+
+                        .content_text{
+                            text-align: center;
+                            border: 1px solid grey;
+                            padding: .4rem 1rem;
+                            border-bottom: none;
+                            font-weight: bold;
+                            opacity: .8;
+                        }
+
+                        .input_measurement{
+                            padding: .4rem 1rem;
+                            background-color: white;
+                            border-top:1px solid grey;
+                            border-left: none;
+                            border-bottom: none;
+                            border-right: none;
+                        }
+                    }
+                }
+
+                
+            }
+
+            .btn_wrapper{
+                display: flex;
+                justify-content: center;
+                margin-top: .6rem;
+
+                .Go_btn{
+                    padding: .5rem 2.6rem;
+                    border: 1px solid transparent;
+                    background-color: $col-secondary;
+                    color: white;
+                    border-radius: 5px;
+                    transition: all .4s ease;
+
+                    &:hover{
+                        transform: scale(1.07);
+                    }
+                }
+            }
+        }
+
+        .measurement_wrapper_right{
+            display: flex;
+            flex-direction: column;
+            
+
+            .opt_btn{
+                padding: 1rem 10rem;
+                font-weight: bold;
+                opacity: .8;
+                background-color: white;
+                margin: .6rem 0;
+                border: 2px solid rgba(186, 185, 185, 0.859);
+                transition: all .4s ease-out;
+
+                &:hover{
+                    background-color: $col-secondary;
+                    color: white;
+                    
+                }
+
+            }
+            
+        }
+      }  
+
+       .carousel{
+        position: relative;
+        margin: 0 auto;
+        padding: 6rem 2rem;
+        height: 600px;
+        width: 80%;
+        // background-color: red;
+         
+
+        &__button--left{
+         position: absolute;
+         top: 47%;
+         left: -1.5%;
+         transform: translateX(37%);
+         z-index: 1000;
+         border: none;
+         cursor: pointer;
+         background: transparent;
+         transition: all .4s ease-in;
+          
+
+         &:hover{
+            transform: scale(1.07);
+         }
+
+         .bx-chevron-left{
+            font-size: 2rem;
+         }
+        }
+         
+
+        &__button--right{
+            position:absolute;
+            background: transparent;
+            top: 47%;
+            left: 44%;
+            border: none;
+            transform: translateX(-37.4%);
+            z-index: 1000;
+            cursor: pointer;
+            transition: all .4s ease-out;
+
+            &:hover{
+                transform:scale(1.07) ;
+            }
+
+            .bx-chevron-right{
+                font-size: 2rem;
+            }
+        }
+           
+    }
+ }  
+
+}
